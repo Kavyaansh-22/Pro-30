@@ -14,12 +14,12 @@ class Block{
     display(){
 
       var pos= this.body.position;
-        rectMode(CENTER);
-        rect(pos.x,pos.y,this.width, this.height);
+      //  rectMode(CENTER);
+    //    rect(pos.x,pos.y,this.width, this.height);
 
-      if(this.body.speed > 3){
+      if(this.body.speed < 3){
         
-        this.body.display();
+      image(this.image,this.body.position.x,this.body.position.y,20,20);
 
       } else {
         World.remove(world,this.body);
